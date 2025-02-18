@@ -1,0 +1,39 @@
+.delete-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.delete-content-box {
+  padding: 30px;
+  background-color: white;
+  width: 300px; }
+
+.delete-content-box h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px; }
+
+.delete-button {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.delete-button:hover {
+  background-color: #c62828; }
+
+.delete-cancel-link {
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px; }
+
+.delete-cancel-link:hover {
+  background-color: #ddd; }
+
+/*# sourceMappingURL=delete_account.css.map */

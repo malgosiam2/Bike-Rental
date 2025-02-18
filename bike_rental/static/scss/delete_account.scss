@@ -1,0 +1,46 @@
+@import 'variables';
+
+.delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.delete-content-box {
+    padding: 30px;
+    background-color: white;
+    width: 300px;
+}
+
+.delete-content-box h1 {
+    font-size: $font_size_one;
+    color: $second-color;
+    margin-bottom: 20px;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: $deletion-color-first;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: $font_size_two;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.delete-button:hover {
+    background-color: $deletion-color-second;
+}
+
+.delete-cancel-link {
+    padding: 8px 16px;
+    background-color: $third-color;
+    color: $second-color;
+    font-size: $font_size_two;
+}
+
+.delete-cancel-link:hover {
+    background-color: #ddd;
+}

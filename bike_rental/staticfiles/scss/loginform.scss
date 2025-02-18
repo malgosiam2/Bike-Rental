@@ -1,0 +1,75 @@
+@import 'variables';
+
+.form-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form {
+    background-color: $third-color;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    font-family: $font, sans-serif;
+    align-items: center;
+}
+
+.formbutton {
+    background-color: $main-color;
+    color: white;
+    font-size: $font_size_two;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.formbutton:hover {
+    background-color: $save-color-first;
+}
+
+.form a {
+    font-size: $font_size_two;
+    color: $second-color;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.inside-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.inside-form input {
+    width: 96%;
+    padding: 5px;
+    border: 1px solid $second-color;
+    font-size: $font_size_two;
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+.error {
+    border: 2px solid $deletion-color-first;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: $deletion-color-second;
+    color: white;
+    padding: 5px;
+    font-size: $font_size_two;
+}
+
+.tooltip.active {
+    display: block;
+}

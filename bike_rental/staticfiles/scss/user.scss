@@ -1,0 +1,106 @@
+@import 'variables';
+.userpage-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 20px;
+}
+
+.userpage-info {
+    width: 40%;
+    background-color: $third-color;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; 
+}
+
+.h3 {
+    color: $main-color;
+}
+
+.userpage-profile-info h3 {
+    margin-bottom: 10px;
+    color: $main-color;
+}
+
+.userpage-profile-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.userpage-profile-info li {
+    margin-bottom: 10px;
+}
+
+.userpage-btn {
+    padding: 8px 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+.userpage-btn-change {
+    background-color: $save-color-first;
+}
+
+.userpage-btn-change:hover {
+    background-color: $save-color-second;
+}
+
+.userpage-orders-section {
+    width: 70%; 
+    background-color: $third-color;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.userpage-orders-category {
+    margin-bottom: 20px;
+}
+
+.userpage-orders-category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.userpage-order-item {
+    background-color: $third-color;
+    margin-bottom: 10px;
+    padding: 15px; 
+    width: 100%; 
+}
+
+.userpage-order-item .userpage-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.userpage-order-item a.userpage-btn-edit {
+    background-color: $save-color-second;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; 
+    margin-left: 10px;
+}
+
+.userpage-order-item a.userpage-btn-edit:hover {
+    background-color: $save-color-first;
+}
+
+.userpage-btn-delete {
+    padding: 8px 15px;
+    background-color: $deletion-color-first;
+    color: white;
+    font-size: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.userpage-btn-delete:hover {
+    background-color: $deletion-color-second;
+}

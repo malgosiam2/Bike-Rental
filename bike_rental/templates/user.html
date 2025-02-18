@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Userpage
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/user.scss' %}">
+{% endblock %}
+
+{% block content %}
+<div class="userpage-container">
+    <div class="userpage-info">
+        {% if user.is_authenticated %}
+            <h1>Welcome, {{ user.username }}!</h1>
+
+            <div class="userpage-profile-info">
+                <h3>Profile Info:</h3>
+                <ul>
+                    <li><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</li>
+                    <li><strong>Email:</strong> {{ user.email }}</li>
+                    <li><strong>Password:</strong> <a href="{% url 'change_password' %}"><button class="userpage-btn userpage-btn-change">Change Password</button></a></li>
+                    <li><a href="{% url 'delete_account' %}" class="userpage-btn userpage-btn-delete">Delete Account</a></li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="userpage-orders-section">
+        {% if orders %}
+            <h2 class="order">Your Orders:</h2>
+
+            <div class="userpage-orders-category">
+                <h3 class="order_status">Orders Before:</h3>
+                <ul>
+                    {% for order in orders %}
+                        {% if order.order_status == 'before' %}
+                            <li class="userpage-order-item {% if order.days_diff < 2 %}too-late{% endif %}">
+                                Order ID: {{ order.id }} - Status: {{ order.order_status }} - Total Cost: {{ order.total_cost }}
+                                {% if order.days_diff >= 2 %}
+                                <div class="userpage-buttons-container">
+                                    <a href="{% url 'edit_order' order.id %}" class="userpage-btn userpage-btn-edit">Edit Order</a>
+
+                                </div>
+                                {% else %}
+                                    <span class="userpage-too-late-text">Too late to edit</span>
+                                {% endif %}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="userpage-orders-category">
+                <h3 class="order_status">Orders In Progress:</h3>
+                <ul>
+                    {% for order in orders %}
+                        {% if order.order_status == 'in progress' %}
+                            <li class="userpage-order-item">Order ID: {{ order.id }} - Status: {{ order.order_status }} - Total Cost: {{ order.total_cost }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="userpage-orders-category">
+                <h3>Orders Completed:</h3>
+                <ul>
+                    {% for order in orders %}
+                        
+                        {% if order.order_status == 'completed' %}
+                            <li class="userpage-order-item">
+                                Order ID: {{ order.id }} - Status: {{ order.order_status }} - Total Cost: {{ order.total_cost }}
+
+                                {% if order.rev_num > 0 %}
+                                <div class="userpage-buttons-container">
+                                    <a href="{% url 'edit_review' order.rev_num %}" class="userpage-btn userpage-btn-edit">Edit Your Review</a>
+
+                                </div>
+                                    
+                                {% else %}
+                                <div class="userpage-buttons-container">
+                                    <a href="{% url 'add_review' order.id %}" class="userpage-btn userpage-btn-edit">Add Your Opinion</a>
+
+                                </div>
+                                {% endif %}
+
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <p>You have no orders yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+@import 'variables';
+h1, h2 {
+    color: $main-color;
+    text-align: center;
+    margin-top: 20px;
+    font-size: $font_size_one;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.price-table {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.price-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.price-table th, .price-table td {
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.price-table th {
+    background-color: $save-color-first;
+    color: white;
+    font-weight: bold;
+}
+
+.price-table td {
+    background-color: $third-color;
+    border-bottom: 1px solid #ddd;
+}
+
+.price-table td:not(:nth-child(1)) {
+    color: $save-color-second;
+}
+
+.price-table td:nth-child(1) {
+    text-align: left;
+}
+
+.price-table tr:nth-child(even) td {
+    background-color: #eaf2e2;
+}
+
+.price-table td:nth-child(2), 
+td:nth-child(3), 
+td:nth-child(4), 
+td:nth-child(5), 
+td:nth-child(6), 
+td:nth-child(7) {
+    font-weight: bold;
+}

@@ -1,0 +1,59 @@
+@import 'variables';
+
+.edit-order-title {
+    text-align: center;
+    font-family: $font, sans-serif;
+    font-size: $font_size_one;
+    font-weight: bold;
+    color: $main-color;
+}
+
+.registerForm {
+    font-family: $font, sans-serif;
+    width: 300px;
+    align-items: center;
+}
+
+.registerForm .edit-order-button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: $deletion-color-first;
+    color: white;
+    font-size: $font_size_two;
+    cursor: pointer;
+}
+
+.registerForm .edit-order-button:hover {
+    color: $deletion-color-second;
+}
+
+.edit-order-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.edit-order-delete-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-order-delete-container button {
+    padding: 12px 20px;
+    background-color: $deletion-color-first;
+    color: white;
+    font-size: $font_size_two;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.edit-order-delete-container button:hover {
+    background-color: $deletion-color-second;
+}
+
+.edit-order-delete-container button:active {
+    background-color: $deletion-color-third;
+}

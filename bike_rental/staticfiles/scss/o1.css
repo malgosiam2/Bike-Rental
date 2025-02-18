@@ -1,0 +1,110 @@
+.tab-content h1 {
+  color: #333;
+  font-family: sans-serif;
+  font-size: xx-large;
+  margin: 20px; }
+
+.tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  border-bottom: 2px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 8px; }
+
+.tabs li {
+  padding: 16px 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease; }
+
+.tabs li:hover {
+  background-color: #e9e9e9; }
+
+.tabs li.active-tab {
+  color: #2f4f4f;
+  background-color: #d1d1d1; }
+
+.active-tab {
+  font-weight: bold; }
+
+.form-container {
+  display: flex;
+  justify-content: flex-end; }
+
+.filter-form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+
+.form-group {
+  margin-bottom: 15px; }
+
+.label {
+  font-weight: bold; }
+
+.apply-button {
+  padding: 8px 16px;
+  background-color: #689f38;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px; }
+
+.tab-content > div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.tab-content > div > div {
+  flex: 0 0 calc(20% - 20px);
+  max-width: calc(20% - 20px);
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px; }
+
+@media (max-width: 850px) {
+  .tab-content > div > div {
+    flex: 0 0 calc(49% - 20px);
+    max-width: calc(49% - 20px); } }
+
+@media (max-width: 480px) {
+  .tab-content > div > div {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px); } }
+
+.tab-content > div > div h3 {
+  font-size: 24px;
+  color: #7cb342;
+  margin-bottom: 8px;
+  font-family: sans-serif; }
+
+.tab-content > div > div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  width: 100%; }
+
+.tab-content > div > div ul li {
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-family: sans-serif; }
+
+/*# sourceMappingURL=o1.css.map */

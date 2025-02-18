@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+
+{% block title %}
+  Email Confirmation
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/messages.scss' %}">
+  {% sass_src 'scss/messages.scss' %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="message-box">
+      <p>No user found with that email.</p>
+    </div>
+{% endblock %}

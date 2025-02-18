@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Price Offer
+{% endblock %}
+
+{% block extra_css %}
+  <!--<link rel="stylesheet" href="{% static 'css/prices.css' %}">-->
+  <link rel="stylesheet" href="{% sass_src 'scss/prices.scss' %}">
+{% endblock %}
+{% block content %}
+
+    <h1>Price Offer</h1>
+
+    <h2>Bikes</h2>
+    <div class="price-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price for 1st Day</th>
+                    <th>Price for 2nd Day</th>
+                    <th>Price for 3rd Day</th>
+                    <th>Price for 4th Day</th>
+                    <th>Price for 5th Day</th>
+                    <th>Price for 6th+ Day</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bike_price in bike_prices %}
+                    <tr>
+                        <td>{{ bike_price.bike.brand }} {{ bike_price.bike.bike_type }}</td>
+                        <td>{{ bike_price.bike.price_for_one_day }}</td>
+                        <td>{{ bike_price.price_2nd_day }}</td>
+                        <td>{{ bike_price.price_3rd_day }}</td>
+                        <td>{{ bike_price.price_4th_day }}</td>
+                        <td>{{ bike_price.price_5th_day }}</td>
+                        <td>{{ bike_price.price_6th_plus_day }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>  
+
+    <div class="price-table">
+        <h2>Accessories</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price for 1st Day</th>
+                    <th>Price for 2nd Day</th>
+                    <th>Price for 3rd Day</th>
+                    <th>Price for 4th Day</th>
+                    <th>Price for 5th Day</th>
+                    <th>Price for 6th+ Day</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for accessory_price in accessory_prices %}
+                    <tr>
+                        <td>{{ accessory_price.accessory.brand }} {{ accessory_price.accessory.accessory_type }}</td>
+                        <td>{{ accessory_price.accessory.price_for_one_day }}</td>
+                        <td>{{ accessory_price.price_2nd_day }}</td>
+                        <td>{{ accessory_price.price_3rd_day }}</td>
+                        <td>{{ accessory_price.price_4th_day }}</td>
+                        <td>{{ accessory_price.price_5th_day }}</td>
+                        <td>{{ accessory_price.price_6th_plus_day }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

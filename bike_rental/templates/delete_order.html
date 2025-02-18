@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Delete Order
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/del_order.scss' %}">
+{% endblock %}
+
+{% block content %}
+<div class="del-order-container">
+        <div class="del-order-h2">
+          <h2>Are you sure you want to delete this order?</h2>
+        </div>
+        <div class="del-order-content">
+            <p><strong>Order ID:</strong> {{ order.id }}</p>
+            <p><strong>User:</strong> {{ order.user.username }}</p>
+            <p><strong>Start Date:</strong> {{ order.start_date }}</p>
+            <p><strong>End Date:</strong> {{ order.end_date }}</p>
+            <p><strong>Total Cost:</strong> ${{ order.total_cost }}</p>
+
+          <form method="post">
+            {% csrf_token %}
+            <div class="del-order-form-buttons">
+              <button type="submit" class="del-order-btn del-order-button">Delete Order</button>
+              <a href="{% url 'user' %}" class="del-order-btn del-order-cancel">Cancel</a>
+            </div>
+          </form>
+        </div>
+</div>
+{% endblock %}

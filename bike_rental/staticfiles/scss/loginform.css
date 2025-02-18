@@ -1,0 +1,64 @@
+.form-outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.form {
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  font-family: sans-serif, sans-serif;
+  align-items: center; }
+
+.formbutton {
+  background-color: #2f4f4f;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px; }
+
+.formbutton:hover {
+  background-color: #8bc34a; }
+
+.form a {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none; }
+
+.form a:hover {
+  text-decoration: underline; }
+
+.inside-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px; }
+
+.inside-form input {
+  width: 96%;
+  padding: 5px;
+  border: 1px solid #333;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 3px; }
+
+.error {
+  border: 2px solid #d32f2f; }
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #c62828;
+  color: white;
+  padding: 5px;
+  font-size: 14px; }
+
+.tooltip.active {
+  display: block; }
+
+/*# sourceMappingURL=loginform.css.map */

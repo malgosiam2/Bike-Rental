@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Register
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/loginform.scss' %}">
+  <script src="{% static 'js/register.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="form-outer-container">
+        <form class="form" id="registerForm" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="inside-form">
+                    {{ field.label_tag }} {{ field }}
+                    {% if field.errors %}
+                        <ul class="field-errors">
+                            {% for error in field.errors %}
+                                <li style="color: red;">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <button class="formbutton" type="submit">Register</button>
+        </form>
+    </div>
+{% endblock %}

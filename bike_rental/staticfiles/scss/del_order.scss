@@ -1,0 +1,75 @@
+@import 'variables';
+
+.del-order-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: $third-color;
+    padding: 20px;
+}
+
+.del-order-h2 {
+    color: $second-color;
+    padding: 20px;
+    text-align: center;
+    font-size: $font_size_one;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.del-order-content {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.del-order-content p {
+    font-size: $font_size_two;
+    margin-bottom: 12px;
+    color: $second-color;
+}
+
+.del-order-content p strong {
+    color: $save-color-first;
+}
+
+.del-order-form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.del-order-btn {
+    padding: 12px 20px;
+    font-size: $font_size_two;
+    cursor: pointer;
+}
+
+.del-order-button {
+    background-color: $deletion-color-first;
+    color: white;
+    border: none;
+}
+
+.del-order-button:hover {
+    background-color: $deletion-color-second;
+}
+
+.del-order-cancel {
+    background-color: $save-color-first;
+    color: white;
+    border: none;
+}
+
+.del-order-cancel:hover {
+    background-color: $save-color-second;
+}
+
+.del-order-cancel:active {
+    background-color: $save-color-third;
+}

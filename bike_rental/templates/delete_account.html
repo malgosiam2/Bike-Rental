@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Delete Account
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/delete_account.scss' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="delete-container">
+    <div class="delete-content-box">
+        <h1>Are you sure you want to delete your account?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="delete-button">Delete my account</button>
+        </form>
+        <a href="{% url 'user' %}" class="delete-cancel-link">Cancel</a>
+    </div>
+</div>
+
+{% endblock %}

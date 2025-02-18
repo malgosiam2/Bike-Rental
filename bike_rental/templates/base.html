@@ -1,0 +1,42 @@
+{% load static %}
+{% load sass_tags %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}Bike Rental{% endblock %}</title>
+        <link rel="stylesheet" href="{% sass_src 'scss/base_layout.scss' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block extra_css %}{% endblock %}
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'offer' %}">Offer</a>
+                <a href="{% url 'prices' %}">Prices</a>
+                <a href="{% url 'create-order' %}">Make a Reservation</a>
+            </div>
+            <div class="title">
+                <p>Bike Rental</p>
+            </div>
+            <div class="nav-right">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'user' %}">User</a>
+                    <a href="{% url 'logout' %}">Sign Out</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Sign In</a>
+                    <a href="{% url 'register' %}">Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+        <img src="{% static 'bike.jpg' %}" alt="Bike Image" />
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
+
+
+        

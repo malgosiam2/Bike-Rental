@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+
+{% block title %}
+  Offer
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/o1.scss' %}">
+  <script src="{% static 'js/offer.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="form-container">
+  <form method="get" class="filter-form">
+      <div class="form-group">
+          <label for="sort-by" class="label">Sort by:</label>
+          {{ form.sort_by }}
+      </div>
+      <button type="submit" class="apply-button">Apply Filters</button>
+  </form>
+</div>
+
+
+<div>
+
+  <ul id="tabs" class="tabs">
+    <li onclick="showTab('bikes-tab')" id="bikes-tab-link" class="active-tab">
+      Bikes
+    </li>
+    <li onclick="showTab('accessories-tab')" id="accessories-tab-link">
+      Accessories
+    </li>
+  </ul>
+
+  <div id="bikes-tab" class="tab-content">
+    <h1>Bikes</h1>
+    <div>
+      {% for bike in bikes %}
+      <div>
+        <h3>{{ bike.bike_type }}</h3>
+        <img src="{{ bike.image.url }}" alt="{{ bike.name }}">
+        <ul>
+          <li><strong>Price per day: </strong>{{ bike.price_for_one_day }}</li>
+          <li><strong>Brand: </strong>{{ bike.brand }}</li>
+          <li><strong>Additional Info:</strong>{{ bike.additional_info }}</li>
+          <li><strong>Person: </strong>{{ bike.person }}</li>
+          <li><strong>Gear Number: </strong>{{bike.gear_num}}</li>
+          <li><strong>Usage: </strong>{{bike.usage}}</li>
+          <li><strong>Weight: </strong>{{bike.weight}}</li>
+          <li><strong>Wheel Size [cm]: </strong>{{bike.wheel_size_cm}}</li>
+          <li><strong>Brake Type: </strong>{{bike.brake_type}}</li>
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div id="accessories-tab" class="tab-content" style="display: none;">
+    <h1>Accessories</h1>
+    <div>
+      {% for accessory in accessories %}
+      <div>
+        <h3>{{ accessory.accessory_type }}</h3>
+        <img src="{{ accessory.image.url }}" alt="{{ accessory.name }}">
+        <ul>
+          <li><strong>Price per day: </strong>{{ accessory.price_for_one_day }}</li>
+          <li><strong>Brand: </strong>{{ accessory.brand }}</li>
+          <li><strong>Additional Info:</strong>{{ accessory.additional_info }}</li>
+          <li><strong>Person: </strong>{{ accessory.person }}</li>
+
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+
+{% block title %}
+  Email Confirmed
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/messages.scss' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="message-box">
+      <p>Email confirmed successufully.</p>
+      <a href="{% url 'home' %}">Click to go back to the homepage</a>
+      
+    </div>
+
+{% endblock %}

@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<Equipment>
+  <bikes>
+    <bike category="bike">
+      <bike_type>Bike For Kids</bike_type>
+      <gear_num>0</gear_num>
+      <usage>City Bike</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>7.30</weight>
+      <wheel_size_cm>35.00</wheel_size_cm>
+      <brake_type>Not applicable</brake_type>
+      <price_for_one_day>35.00</price_for_one_day>
+      <quantity>40</quantity>
+      <brand>BTWIN</brand>
+      <additional_info/>
+      <person>Kids</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Bike For Kids</bike_type>
+      <gear_num>2</gear_num>
+      <usage>City Bike</usage>
+      <has_bell>True</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>10.00</weight>
+      <wheel_size_cm>66.00</wheel_size_cm>
+      <brake_type>Normal</brake_type>
+      <price_for_one_day>35.00</price_for_one_day>
+      <quantity>50</quantity>
+      <brand>KidsBikes</brand>
+      <additional_info/>
+      <person>Kids</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Mountain bike (MTB)</bike_type>
+      <gear_num>21</gear_num>
+      <usage>Ideal for off-road trails, mountain terrain, and casual riding</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>14.50</weight>
+      <wheel_size_cm>74.00</wheel_size_cm>
+      <brake_type>Hydraulic disc brakes</brake_type>
+      <price_for_one_day>100.00</price_for_one_day>
+      <quantity>100</quantity>
+      <brand>Trek</brand>
+      <additional_info/>
+      <person>Men</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Mountain bike (MTB) Women</bike_type>
+      <gear_num>18</gear_num>
+      <usage>Suitable for trail riding, cross-country, and rugged terrain</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>13.20</weight>
+      <wheel_size_cm>70.00</wheel_size_cm>
+      <brake_type>Mechanical disc brakes</brake_type>
+      <price_for_one_day>100.00</price_for_one_day>
+      <quantity>90</quantity>
+      <brand>Specialized</brand>
+      <additional_info/>
+      <person>Women</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Gravel bike Men</bike_type>
+      <gear_num>22</gear_num>
+      <usage>Designed for long-distance rides, mixed terrain, and gravel roads</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>True</has_trunk>
+      <weight>9.80</weight>
+      <wheel_size_cm>68.00</wheel_size_cm>
+      <brake_type>Hydraulic disc brakes</brake_type>
+      <price_for_one_day>90.00</price_for_one_day>
+      <quantity>120</quantity>
+      <brand>Polisport</brand>
+      <additional_info/>
+      <person>Men</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Gravel bike Women</bike_type>
+      <gear_num>22</gear_num>
+      <usage>Perfect for commuting, fitness rides, and gravel path adventures</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>True</has_trunk>
+      <weight>9.80</weight>
+      <wheel_size_cm>68.00</wheel_size_cm>
+      <brake_type>Mechanical disc brakes</brake_type>
+      <price_for_one_day>110.00</price_for_one_day>
+      <quantity>80</quantity>
+      <brand>Cannondale</brand>
+      <additional_info/>
+      <person>Women</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Women’s City Bike</bike_type>
+      <gear_num>7</gear_num>
+      <usage>Ideal for commuting, casual city rides, and short-distance trips</usage>
+      <has_bell>True</has_bell>
+      <has_trunk>True</has_trunk>
+      <weight>13.00</weight>
+      <wheel_size_cm>66.00</wheel_size_cm>
+      <brake_type>Coaster brake (backpedal) and front hand brake</brake_type>
+      <price_for_one_day>80.00</price_for_one_day>
+      <quantity>120</quantity>
+      <brand>Electra</brand>
+      <additional_info/>
+      <person>Women</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Men’s city bike</bike_type>
+      <gear_num>7</gear_num>
+      <usage>Great for commuting, urban cycling, and leisurely rides in the city</usage>
+      <has_bell>True</has_bell>
+      <has_trunk>True</has_trunk>
+      <weight>14.00</weight>
+      <wheel_size_cm>71.00</wheel_size_cm>
+      <brake_type>V-brakes (front and rear)</brake_type>
+      <price_for_one_day>80.00</price_for_one_day>
+      <quantity>130</quantity>
+      <brand>Electra</brand>
+      <additional_info/>
+      <person>Men</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Unisex trekking bike</bike_type>
+      <gear_num>24</gear_num>
+      <usage>Ideal for long-distance touring, cross-country rides, and mixed terrain</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>14.20</weight>
+      <wheel_size_cm>70.00</wheel_size_cm>
+      <brake_type>Hydraulic disc brakes</brake_type>
+      <price_for_one_day>90.00</price_for_one_day>
+      <quantity>100</quantity>
+      <brand>Cube</brand>
+      <additional_info/>
+      <person>Unisex</person>
+    </bike>
+    <bike category="bike">
+      <bike_type>Unisex BMX bike</bike_type>
+      <gear_num>0</gear_num>
+      <usage>freestyle, street riding</usage>
+      <has_bell>False</has_bell>
+      <has_trunk>False</has_trunk>
+      <weight>10.50</weight>
+      <wheel_size_cm>51.00</wheel_size_cm>
+      <brake_type>U-brake (front and rear)</brake_type>
+      <price_for_one_day>100.00</price_for_one_day>
+      <quantity>100</quantity>
+      <brand>Cube</brand>
+      <additional_info>Tires: Strong, knobby tires for added grip and stability on rough surfaces</additional_info>
+      <person>Unisex</person>
+    </bike>
+  </bikes>
+  <accessories>
+    <accessory category="accessory">
+      <accessory_type>Bike Helmet Paw Patrol</accessory_type>
+      <price_for_one_day>15.00</price_for_one_day>
+      <quantity>30</quantity>
+      <brand>Paw Patrol</brand>
+      <additional_info>adjustable helmet</additional_info>
+      <person>Kids</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bike Helmet Rockrider</accessory_type>
+      <price_for_one_day>25.00</price_for_one_day>
+      <quantity>50</quantity>
+      <brand>Rockrider Expl 500</brand>
+      <additional_info>17 ventilation ducts</additional_info>
+      <person>Unisex</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bike Helmet SLAG RADVIK</accessory_type>
+      <price_for_one_day>25.00</price_for_one_day>
+      <quantity>60</quantity>
+      <brand>SLAG RADVIK</brand>
+      <additional_info>Soft cover, removable, protecting the chin</additional_info>
+      <person>Unisex</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bike Helmet BACKFLIP</accessory_type>
+      <price_for_one_day>30.00</price_for_one_day>
+      <quantity>45</quantity>
+      <brand>O'Neal BACKFLIP</brand>
+      <additional_info/>
+      <person>Men</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bike Helmet KORTAL</accessory_type>
+      <price_for_one_day>30.00</price_for_one_day>
+      <quantity>50</quantity>
+      <brand>POC KORTAL RACE MIPS</brand>
+      <additional_info/>
+      <person>Women</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bicycle lock</accessory_type>
+      <price_for_one_day>9.00</price_for_one_day>
+      <quantity>80</quantity>
+      <brand>Elops</brand>
+      <additional_info/>
+      <person>Unisex</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bicycle bottle holder</accessory_type>
+      <price_for_one_day>8.00</price_for_one_day>
+      <quantity>40</quantity>
+      <brand>Elite Superleggero</brand>
+      <additional_info/>
+      <person>Unisex</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bicycle trailer</accessory_type>
+      <price_for_one_day>50.00</price_for_one_day>
+      <quantity>15</quantity>
+      <brand>Polisport</brand>
+      <additional_info>For use as a trailer or stroller for 1 or 2 children – from 9 months to 6 years old</additional_info>
+      <person>Kids</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Bicycle child seat</accessory_type>
+      <price_for_one_day>20.00</price_for_one_day>
+      <quantity>40</quantity>
+      <brand>Polisport</brand>
+      <additional_info/>
+      <person>Kids</person>
+    </accessory>
+    <accessory category="accessory">
+      <accessory_type>Smartphone holder</accessory_type>
+      <price_for_one_day>8.00</price_for_one_day>
+      <quantity>100</quantity>
+      <brand>SmartBikes</brand>
+      <additional_info/>
+      <person>Unisex</person>
+    </accessory>
+  </accessories>
+</Equipment>

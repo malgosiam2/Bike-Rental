@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Edit Order
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/edit_order.scss' %}">
+  <script src="{% static 'js/create_order.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div class="h2_div">
+    <h1 class="edit-order-title">Edit Order</h1>
+
+        <div class="edit-order-content">
+            <form class="registerForm" id="registerForm" method="post">
+                {% csrf_token %}
+                {{ order_form.as_p }}
+                <h3>Bike Items</h3>
+                <div id="bike-formset">
+                    {{ bike_formset.management_form }}
+                    {% for form in bike_formset %}
+                        {{ form.as_p }}
+                    {% endfor %}
+                </div>
+                <h3>Accessory Items</h3>
+                <div id="accessory-formset">
+                    {{ accessory_formset.management_form }}
+                    {% for form in accessory_formset %}
+                        {{ form.as_p }}
+                    {% endfor %}
+                </div>
+                <button class="edit-order-button" type="submit">Save Changes</button>
+            </form>
+        </div>
+
+        <div class="edit-order-delete-container">
+            <form class="registerForm" method="get" action="{% url 'delete_order' order.id %}">
+                {% csrf_token %}
+                <button type="submit">Delete Order</button>
+            </form>
+        </div>
+</div>
+
+
+{% endblock %}
+

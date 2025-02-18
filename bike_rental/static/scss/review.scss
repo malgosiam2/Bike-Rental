@@ -1,0 +1,55 @@
+@import 'variables';
+.review-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-form-card {
+    background-color: $third-color;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 5px;
+}
+
+.review-form-title {
+    text-align: center;
+    font-family: $font;
+    margin-bottom: 1.5rem;
+    font-size: $font_size_one;
+    color: $main-color;
+}
+
+.review-button {
+    width: 100%;
+    padding: 10px;
+    background-color: $save-color-first;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.review-button:hover {
+    background-color: $save-color-second;
+}
+
+.review-form-container input, 
+.review-form-container textarea, 
+.review-form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.review-form-container label {
+    font-size: 14px;
+    color: $main-color;
+}

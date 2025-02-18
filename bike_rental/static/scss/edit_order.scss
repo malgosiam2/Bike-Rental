@@ -1,0 +1,83 @@
+@import 'variables';
+
+.edit-order-title {
+    text-align: center;
+    font-family: $font, sans-serif;
+    font-size: $font_size_one;
+    font-weight: bold;
+    color: $main-color;
+}
+
+.registerForm {
+    font-family: $font, sans-serif;
+    width: 300px;
+    align-items: center;
+}
+
+.registerForm .edit-order-button {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: $save-color-first;
+    color: white;
+    border-color: $save-color-third;
+    font-size: $font_size_two;
+    cursor: pointer;
+}
+
+.registerForm .edit-order-button:hover {
+    background-color: $save-color-third;
+}
+
+
+.edit-order-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.edit-order-delete-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-order-delete-container button {
+    padding: 12px 20px;
+    background-color: $deletion-color-first;
+    color: white;
+    font-size: $font_size_two;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.edit-order-delete-container button:hover {
+    background-color: $deletion-color-second;
+}
+
+.edit-order-delete-container button:active {
+    background-color: $deletion-color-third;
+}
+
+h3 {
+    font-family: $font;
+    font-size: 30px;
+    color: $main-color;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    font-size: $font_size_two;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+label {
+    font-size: $font_size_two;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}

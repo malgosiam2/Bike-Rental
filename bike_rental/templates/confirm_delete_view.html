@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Email Confirmation
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/messages.scss' %}">
+{% endblock %}
+
+
+{% block content %}
+    <div class="message-box">
+      <p>A confirmation email has been sent to your email address.</p>
+    </div>
+{% endblock %}

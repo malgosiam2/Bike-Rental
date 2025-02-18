@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Homepage
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/home.scss' %}">
+{% endblock %}
+
+{% block content %}
+
+  <div class='homepage-all'>
+
+  <div class="homepage-left-part">
+    <h1>Information:</h1>
+    <p>You can rent or return the equipment within our working hours</p>
+
+    <ul>Opening Hours: 
+      <li>Monday-Friday: 9am - 8pm</li>
+      <li>Saturday: 9am - 6pm</li>
+      <li>Sunday: 10am - 6pm</li>
+    </ul>
+
+    <p> ul Wybickiego 34, 83-120 Subkowy </p>
+
+    <ul>
+      <p>If you have questions, don't hesitate to call or write: </p>
+      <li>Name: Gosia Mokwa</li>
+      <li>Tel: 230-872-738</li>
+      <li>Email: toniejestmojtelefon@gmail.com</li>
+    </ul>
+
+    <h2>Our Location</h2>
+    <div id="map" style="height: 400px; width: 100%; margin: 10px"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    
+     </div>
+
+     <div class="homepage-right-part">
+
+      <h1>Reviews:</h1>
+
+      <div class="reviews">
+        {% for review in reviews %}
+          <div class="review">
+            <h3>{{ review.title }}</h3>
+            <p><strong>Date:</strong> {{ review.date|date:"Y-m-d" }}</p>
+            <p>{{ review.description }}</p>
+          </div>
+        {% empty %}
+          <p>No reviews yet.</p>
+        {% endfor %}
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+    <script>
+      var lat = 52.2296756;
+      var lng = 21.0122287;
+
+      var map = L.map('map').setView([lat, lng], 13); 
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([lat, lng]).addTo(map)
+        .bindPopup("<b>Our Location!</b>")
+        .openPopup();
+    </script>
+
+{% endblock %}

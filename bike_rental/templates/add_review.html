@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  Add review
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/review.scss' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="review-form-container">
+        <div class="review-form-card">
+            <h1 class="review-form-title">Add Your Review for Order #{{ order.id }}</h1>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ review_form.as_p }}
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        let dateField = document.querySelector('input[name="date"]');
+                        dateField.setAttribute('readonly', true);
+                    });
+                </script>
+
+                <button type="submit" class="review-button">Submit Review</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

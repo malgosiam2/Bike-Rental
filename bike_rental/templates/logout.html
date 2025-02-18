@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sass_tags %}
+
+{% block title %}
+  LogOut
+{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% sass_src 'scss/loginform.scss' %}">
+{% endblock %}
+
+{% block content %}
+
+  <div class="form-outer-container">
+    <div class="form">
+      <p>Click the button below to log out.</p>
+      <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button class="formbutton" type="submit">Logout</button>
+      </form>
+    </div>
+</div>
+
+{% endblock %}
+
